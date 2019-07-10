@@ -161,6 +161,10 @@ var diminSeven = new Chord("Diminished Seventh", [0, 3, 6, 9]);
 var hdimiSeven = new Chord("Half-Diminished Seventh", [0, 3, 6, 10]);
 
 var sixthChord = new Chord("Sixth Chord", [0, 4, 7, 9]);
+var dominNinth = new Chord("Dominant Ninth", [0, 2, 4, 7, 10]);
+var majorNinth = new Chord("Major Ninth", [0, 4, 7, 11, 2]);
+var minorNinth = new Chord("Minor Ninth", [0, 3, 7, 11, 2]);
+var dominMin9 = new Chord("Dominant Minor Ninth", [0, 4, 7, 10, 1]);
 
 function BuildChord() {
 	sel = document.getElementById('chordList');
@@ -202,16 +206,35 @@ function BuildChord() {
 		case "MinorSeven":			
 			console.log(minorSeven.name);
 			minorSeven.draw();
-		break;
+			break;
 		case "DiminSeven":			
 			console.log(diminSeven.name);
 			diminSeven.draw();
-		break;
+			break;
 		case "HDimiSeven":			
 			console.log(hdimiSeven.name);
 			hdimiSeven.draw();
-		break;
-		
+			break;
+		case "SixthChord":			
+			console.log(sixthChord.name);
+			sixthChord.draw();
+			break;
+		case "DominNinth":			
+			console.log(dominNinth.name);
+			dominNinth.draw();
+			break;
+		case "MajorNinth":			
+			console.log(majorNinth.name);
+			majorNinth.draw();
+			break;
+		case "MinorNinth":			
+			console.log(minorNinth.name);
+		 	minorNinth.draw();		
+			break;
+		case "DominMin9":			
+			console.log(dominMin9.name);
+		 	dominMin9.draw();		
+			break;
 		default: alert("Error on BuildChord. This chord was not added yet");
 	}
 

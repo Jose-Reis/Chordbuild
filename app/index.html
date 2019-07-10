@@ -13,6 +13,17 @@
 
 <body>
 	<div class=row>
+		<div class= "column second"> 
+			<p>Tuning</p>
+			<input 
+				id="tuning" 
+				name="tuning" 
+				style="text-transform: uppercase" 
+				value="EADGBE" 
+				placeholder="EADGBE"
+				onkeypress="return onKeyValidate(event,alpha);"
+			>
+		</div>
 		<div class="column first">
 			<p>Tone</p>
 			<select id="notelist" style="width:30px;" tabindex="1">
@@ -30,41 +41,32 @@
 				<option value="11">B</option>
 			</select>
 		</div>
-		<div class= "column second"> 
-			<p>Tuning</p>
-			<input 
-				id="tuning" 
-				name="tuning" 
-				style="text-transform: uppercase" 
-				value="EADGBE" 
-				placeholder="EADGBE"
-				onkeypress="return onKeyValidate(event,alpha);"
-			>
-		</div>
+
 		<div class="column third">
 			<p>Select chord or scale</p>
-			<select id="chordList" style="width:160px;" tabindex="1">
+			<select id="chordList" style="width:260px;" tabindex="1">
 				<optgroup label="Triads"></optgroup>
-				<option value="MajorChord">Major chord</option>
-				<option value="MinorChord">Minor chord</option>
-				<option value="DiminChord">Diminished chord</option>
-				<option value="AugmeChord">Augmented chord</option>
-				<option value="Suspended2">Suspended 2nd</option>		
-				<option value="Suspended4">Suspended 4th</option>
+				<option value="MajorChord">Major chord </option>
+				<option value="MinorChord">Minor chord | min, m</option>
+				<option value="DiminChord">Diminished chord | dim</option>
+				<option value="AugmeChord">Augmented chord | aug</option>
+				<option value="Suspended2">Suspended 2nd | sus2</option>		
+				<option value="Suspended4">Suspended 4th | sus4</option>
 	
 				<optgroup label="Seventh Chords"></optgroup>
-				<option value="MajorSeven">Major Seventh</option>
-				<option value="DominSeven">Dominant Seventh</option>
-				<option value="MinorSeven">Minor Seventh</option>
-				<option value="DiminSeven">Diminished Seventh</option>
-				<option value="HDimiSeven">Half-Diminished Seventh</option>
+				<option value="MajorSeven">Major Seventh | maj7</option>
+				<option value="DominSeven">Dominant Seventh | 7</option>
+				<option value="MinorSeven">Minor Seventh | 7</option>
+				<option value="DiminSeven">Diminished Seventh | dim7</option>
+				<option value="HDimiSeven">Half-Diminished Seventh | °dim7</option>
 
 				<optgroup label="Other Chords"></optgroup>
-				<option value="SixthChord">Sixth Chord</option>
-				<option value="DominSeven">Dominant Seventh</option>
-				<option value="MinorSeven">Minor Seventh</option>
-				<option value="DiminSeven">Diminished Seventh</option>
-				<option value="HDimiSeven">Half-Diminished Seventh</option>
+				<option value="SixthChord">Sixth Chord | 6</option>
+				<option value="DominNinth">Dominant Ninth | 9</option>
+				<option value="MajorNinth">Major Ninth | maj9</option>
+				<option value="MinorNinth">Minor Ninth | m9</option>
+				<option value="DominMin9">Dominant minor Ninth | 7♭9</option>
+
 			</select>		
 		</div>
 	</div>
