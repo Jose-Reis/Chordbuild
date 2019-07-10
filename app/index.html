@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Chord builder</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="style.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+
+<body>
+	<div class=row>
+		<div class="column first">
+			<p>Tone</p>
+			<select id="notelist" style="width:30px;" tabindex="1">
+				<option value="0" selected="selected">C</option>
+				<option value="1">Db</option>
+				<option value="2">D</option>
+				<option value="3">Eb</option>
+				<option value="4">E</option>
+				<option value="5">F</option>
+				<option value="6">Gb</option>
+				<option value="7">G</option>
+				<option value="8">Ab</option>
+				<option value="9">A</option>
+				<option value="10">Bb</option>
+				<option value="11">B</option>
+			</select>
+		</div>
+		<div class= "column second"> 
+			<p>Tuning</p>
+			<input 
+				id="tuning" 
+				name="tuning" 
+				style="text-transform: uppercase" 
+				value="EADGBE" 
+				placeholder="EADGBE"
+				onkeypress="return onKeyValidate(event,alpha);"
+			>
+		</div>
+		<div class="column third">
+			<p>Select chord or scale</p>
+			<select id="chordList" style="width:160px;" tabindex="1">
+				<optgroup label="Triads"></optgroup>
+				<option value="MajorChord">Major chord</option>
+				<option value="MinorChord">Minor chord</option>
+				<option value="DiminChord">Diminished chord</option>
+				<option value="AugmeChord">Augmented chord</option>
+				<option value="Suspended2">Suspended 2nd</option>		
+				<option value="Suspended4">Suspended 4th</option>
+	
+				<optgroup label="Seventh Chords"></optgroup>
+				<option value="MajorSeven">Major Seventh</option>
+				<option value="DominSeven">Dominant Seventh</option>
+				<option value="MinorSeven">Minor Seventh</option>
+				<option value="DiminSeven">Diminished Seventh</option>
+				<option value="HDimiSeven">Half-Diminished Seventh</option>
+
+				<optgroup label="Other Chords"></optgroup>
+				<option value="SixthChord">Sixth Chord</option>
+				<option value="DominSeven">Dominant Seventh</option>
+				<option value="MinorSeven">Minor Seventh</option>
+				<option value="DiminSeven">Diminished Seventh</option>
+				<option value="HDimiSeven">Half-Diminished Seventh</option>
+			</select>		
+		</div>
+	</div>
+
+	<div class="row">
+		<button class="btn" onclick="Start()">Build Chart</button>
+		<p id=noteout></p>
+	</div>
+	<canvas id="myCanvas" width="1024" height="540"></canvas>
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
