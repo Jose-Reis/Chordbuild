@@ -15,7 +15,7 @@ var centerY = canvas.height / 2;
 var radius = 6;
 var frX0 = 50;
 var frY0 = 50;
-var frIncX = 62;
+var frIncX = 52;
 var frIncY = 26;
 var frBsWd = 10;
 var frBsHe = 132;
@@ -58,7 +58,7 @@ function Fretstart() {
 	var tLength = t.length;
 	for (var i = 0; i < tLength; i++) {
 	  fretStart.fillRect(frX0,frY0,frBsWd,(frIncY * i) + strHe);//Fretboard base
-	  fretStart.fillRect(frX0+frBsWd,frY0+(frIncY * i),strWd,strHe);//Fretboard strings
+	  fretStart.fillRect(frX0+frBsWd,frY0+(frIncY * i),frIncX*fretNr,strHe);//Fretboard strings
 	}
 	for (var i=0; i<=fretNr; i++) {
 	  fretStart.fillRect(frX0+frBsWd-frWd+(frIncX * i),frY0,frWd,frIncY * (tLength - 1));//Frets
@@ -165,6 +165,15 @@ var dominNinth = new Chord("Dominant Ninth", [0, 2, 4, 7, 10]);
 var majorNinth = new Chord("Major Ninth", [0, 4, 7, 11, 2]);
 var minorNinth = new Chord("Minor Ninth", [0, 3, 7, 11, 2]);
 var dominMin9 = new Chord("Dominant Minor Ninth", [0, 4, 7, 10, 1]);
+var sixNineCrd = new Chord("6/9 Chord", [0, 4 ,7, 9, 2]);
+
+var majorScale = new Chord("Major Scale", [0, 2 ,4, 5, 7, 9, 11]);
+var minorScale = new Chord("Minor Scale", [0, 2, 3, 5, 7, 8, 10]);
+var harmMScale = new Chord("Harmonic Minor Scale", [0, 2, 3, 5, 7, 8, 11]);
+var pentaMajor = new Chord("Pentatonic Major Scale", [0, 2 ,4, 7, 9]);
+var pentaMinor = new Chord("Pentatonic Minor Scale", [0, 3, 5, 7, 10]);
+var bluesScale = new Chord("Blues Scale", [0, 3, 5, 6, 7, 10]);
+
 
 function BuildChord() {
 	sel = document.getElementById('chordList');
@@ -235,6 +244,34 @@ function BuildChord() {
 			console.log(dominMin9.name);
 		 	dominMin9.draw();		
 			break;
+		case "SixNineCrd":			
+			console.log(sixNineCrd.name);
+		 	sixNineCrd.draw();		
+		break;
+		case "MajorScale":			
+			console.log(majorScale.name);
+			majorScale.draw();		
+		break;
+		case "MinorScale":			
+			console.log(minorScale.name);
+			minorScale.draw();		
+		break;	
+		case "HarmMScale":			
+			console.log(harmMScale.name);
+			harmMScale.draw();		
+		break;
+		case "PentaMajor":			
+			console.log(pentaMajor.name);
+			pentaMajor.draw();		
+		break;
+		case "PentaMinor":			
+			console.log(pentaMinor.name);
+			pentaMinor.draw();		
+		break;	
+		case "BluesScale":			
+			console.log(bluesScale.name);
+			bluesScale.draw();		
+		break;
 		default: alert("Error on BuildChord. This chord was not added yet");
 	}
 
